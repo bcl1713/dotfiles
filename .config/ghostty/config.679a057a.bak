@@ -1,3 +1,2 @@
 font-family = "FiraCode Nerd Font Mono"
 theme = "tokyonight"
-keybind = shift+enter=text:\x1b\r

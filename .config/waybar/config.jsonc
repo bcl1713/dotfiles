@@ -15,6 +15,7 @@
     "battery",
     "battery#bat2",
     "clock",
+    "clock#UTC",
   ],
   "hyprland/workspaces": {
     "persistent-workspaces": {
@@ -22,7 +23,12 @@
     },
   },
   "clock": {
-    // "timezone": "America/New_York",
+    //"timezone": "America/New_York",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}",
+  },
+  "clock#UTC": {
+    "timezone": "UTC",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}",
   },

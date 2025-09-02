@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Set wallpaper directory
+wall_dir="$HOME/Pictures/Wallpapers"
+
+# Pick a random wallpaper safely (handles spaces, special chars)
+wall=$(find "$wall_dir" -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.gif" \) -print0 | shuf -z -n 1 | tr -d '\0')
+
+# Picks background wallpaper
+swww img "$wall"
+
+# Generate color scheme
+wal -c
+wal -i "$wall"
+
+# Optionally update Firefox theme
+# pywalfox update
+
+# Deletes the swww cache
+rm -rf "$HOME/.cache/swww"

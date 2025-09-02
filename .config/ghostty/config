@@ -1,3 +1,4 @@
 font-family = "FiraCode Nerd Font Mono"
 theme = "tokyonight"
-keybind = shift+enter=text:\x1b\r
+background-opacity = 0.9
+background-blur = 20

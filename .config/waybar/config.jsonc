@@ -8,7 +8,7 @@
   "margin-bottom": 8,
   // Choose the order of the modules
   "modules-left": ["hyprland/workspaces"],
-  "modules-center": [],
+  "modules-center": ["hyprland/window"],
   "modules-right": [
     "network",
     "power-profiles-daemon",
@@ -17,6 +17,9 @@
     "clock",
     "clock#UTC",
   ],
+  "hyprland/window": {
+    "format": "{}",
+  },
   "hyprland/workspaces": {
     "persistent-workspaces": {
       "*": 4,

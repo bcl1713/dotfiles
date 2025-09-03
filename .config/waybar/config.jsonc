@@ -5,6 +5,7 @@
   "height": 32, // Waybar height (to be removed for auto height)
   "spacing": 4, // Gaps between modules (4px)
   "margin-bottom": 8,
+  "reload_style_on_change": true,
   // Choose the order of the modules
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
@@ -12,7 +13,6 @@
     "network",
     "power-profiles-daemon",
     "battery",
-    "battery#bat2",
     "clock",
     "clock#UTC",
   ],
@@ -35,21 +35,6 @@
     "format-alt": "{:%Y-%m-%d}",
   },
   "battery": {
-    "states": {
-      // "good": 95,
-      "warning": 30,
-      "critical": 15,
-    },
-    "format": "{capacity}% {icon}",
-    "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
-    "format-icons": ["", "", "", "", ""],
-  },
-  "battery#bat2": {
     "states": {
       // "good": 95,
       "warning": 30,

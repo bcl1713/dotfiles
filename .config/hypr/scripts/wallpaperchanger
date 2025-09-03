@@ -13,8 +13,5 @@ swww img "$wall"
 wal -c
 wal -i "$wall"
 
-# Optionally update Firefox theme
-# pywalfox update
-
 # Deletes the swww cache
 rm -rf "$HOME/.cache/swww"

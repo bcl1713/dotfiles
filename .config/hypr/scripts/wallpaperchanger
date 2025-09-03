@@ -11,7 +11,7 @@ swww img "$wall"
 
 # Generate color scheme
 wal -c
-wal -i "$wall"
+wal --cols16 -i "$wall"
 
 # Deletes the swww cache
 rm -rf "$HOME/.cache/swww"

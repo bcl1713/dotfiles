@@ -4,18 +4,30 @@ My personal configuration files managed with [GNU Stow](https://www.gnu.org/soft
 
 ## What's Included
 
-- **zsh** - Shell configuration (`.zshrc`)
-- **git** - Git configuration (`.gitconfig`) and global gitignore
-- **neovim** - Neovim configuration with Lazy.nvim and plugins
-- **fish** - Fish shell configuration
-- **git** - Additional git configuration in `.config/git/`
+- **[zsh](https://www.zsh.org/)** - Shell configuration with [Powerlevel10k](https://github.com/romkatv/powerlevel10k) (`.zshrc`, `.p10k.zsh`)
+- **[fish](https://fishshell.com/)** - Fish shell configuration
+- **[git](https://git-scm.com/)** - Git configuration (`.gitconfig`) and global gitignore
+- **[neovim](https://neovim.io/)** - Neovim configuration with [LazyVim](https://github.com/LazyVim/LazyVim) and plugins
+- **[hypr](https://hyprland.org/)** - Hyprland window manager configuration
+- **[waybar](https://github.com/Alexays/Waybar)** - Status bar for Wayland compositors
+- **[wofi](https://hg.sr.ht/~scoopta/wofi)** - Application launcher for Wayland
+- **[swaync](https://github.com/ErikReider/SwayNotificationCenter)** - Notification daemon for sway/Hyprland
+- **[ghostty](https://ghostty.org/)** - Terminal emulator configuration
+- **[wal](https://github.com/dylanaraps/pywal)** - Pywal color scheme templates
+- **[syncthing](https://syncthing.net/)** - File synchronization configuration
 
 ## Prerequisites
 
 - [GNU Stow](https://www.gnu.org/software/stow/)
-- Git
-- Your preferred shell (zsh/fish)
-- Neovim (if using nvim config)
+- [Git](https://git-scm.com/)
+- Your preferred shell ([zsh](https://www.zsh.org/)/[fish](https://fishshell.com/))
+- [Neovim](https://neovim.io/) (if using nvim config)
+- [Hyprland](https://hyprland.org/) (for window manager config)
+- [Waybar](https://github.com/Alexays/Waybar) (for status bar)
+- [Wofi](https://hg.sr.ht/~scoopta/wofi) (for application launcher)
+- [SwayNotificationCenter](https://github.com/ErikReider/SwayNotificationCenter) (for notifications)
+- [Ghostty](https://ghostty.org/) (for terminal config)
+- [Pywal](https://github.com/dylanaraps/pywal) (for color scheme generation)
 
 ### Installing Stow
 
@@ -74,11 +86,20 @@ package that can be stowed independently:
 ```
 dotfiles/
 ├── .config/
-│   ├── fish/
-│   ├── git/
-│   └── nvim/
-├── .gitconfig
-└── .zshrc
+│   ├── fish/           # Fish shell configuration
+│   ├── git/            # Git ignore patterns
+│   ├── nvim/           # Neovim with LazyVim
+│   ├── hypr/           # Hyprland window manager
+│   ├── waybar/         # Status bar configuration
+│   ├── wofi/           # Application launcher
+│   ├── swaync/         # Notification daemon
+│   ├── ghostty/        # Terminal emulator
+│   ├── wal/            # Pywal templates
+│   └── syncthing/      # File synchronization
+├── .gitconfig          # Git user configuration
+├── .zshrc              # Zsh configuration
+├── .p10k.zsh           # Powerlevel10k theme
+└── .stignore           # Syncthing ignore patterns
 ```
 
 ## Usage
@@ -86,14 +107,14 @@ dotfiles/
 ### Installing configurations
 
 ```bash
-cd ~/.dotfiles
+cd ~/dotfiles
 stow .  # Install everything
 ```
 
 ### Removing configurations
 
 ```bash
-cd ~/.dotfiles
+cd ~/dotfiles
 stow -D .  # Remove all symlinks
 ```
 
@@ -105,10 +126,14 @@ stow -D .  # Remove all symlinks
 
 ## Notes
 
-- This setup assumes your dotfiles repo is in `~/.dotfiles`
+- This setup assumes your dotfiles repo is in `~/dotfiles`
 - Stow will create symlinks from your home directory to the files in this repo
 - Make sure to backup any existing configurations before stowing
 - Some configurations may require additional setup (fonts, plugins, etc.)
+- Hyprland configs include window rules, keybindings, and startup applications
+- Waybar configuration includes custom scripts for system information
+- Neovim uses LazyVim as the base configuration with additional plugins
+- Zsh includes Powerlevel10k theme configuration
 
 ## License
 

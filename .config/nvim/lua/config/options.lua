@@ -5,3 +5,6 @@
 vim.cmd.colorscheme = nil
 vim.opt.termguicolors = false
 vim.cmd("set t_Co=256")
+
+-- Disable list mode to prevent spaces showing as dashes
+vim.opt.list = false

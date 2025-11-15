@@ -76,3 +76,5 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # source colors
 (cat ~/.cache/wal/sequences &)
+
+alias claude="/home/brian/.claude/local/claude"

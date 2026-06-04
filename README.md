@@ -126,6 +126,7 @@ stow -D .  # Remove all symlinks
 
 ## Notes
 
+- This repository is also serving as a small automation canary; actionable work should be triggered only by explicit routing labels such as `ready-for-docs` or `ready-for-fix`, not broad descriptive labels.
 - This setup assumes your dotfiles repo is in `~/dotfiles`
 - Stow will create symlinks from your home directory to the files in this repo
 - Make sure to backup any existing configurations before stowing

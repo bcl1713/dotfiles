@@ -54,7 +54,7 @@ sudo pacman -S stow
 1. Clone this repository to your home directory:
 
 ```bash
-git clone https://github.com/bcl171/dotfiles.git ~/dotfiles
+git clone https://github.com/bcl1713/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
 
